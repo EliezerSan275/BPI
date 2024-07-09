@@ -1,0 +1,48 @@
+main{
+    height: 90vh; /* El encabezado ocupa el 90% de la altura de la ventana */
+}
+.btnPrincipales {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    margin: 0 auto; /* Centra el div horizontalmente */
+    padding: 50px;
+    padding: 100px 0px;
+}
+
+app-btn-largo {
+    flex: 1; /* Permite que el contenedor del botón crezca para llenar el espacio disponible */
+    margin: 0 10px; /* Añade algo de margen entre los botones, ajusta según sea necesario */
+}
+
+h2{
+    font-size: 2vw; /* Tamaño del texto basado en el viewport width */
+}
+.proyectosPrioritarios {
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+}
+
+.scrollbar {
+    overflow-y: auto;
+    height: 40vh;
+    overflow-x: hidden;
+    padding-right: 10px;
+}
+
+/* Estilo específico para WebKit (Chrome, Safari, Opera) */
+.scrollbar::-webkit-scrollbar {
+    width: 10px; /* Grosor de la scrollbar */
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    background-color: transparent; /* Color de fondo de la pista de la scrollbar */
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color:  var(--greyscale-100); /* Color del thumb (barra deslizadora) */
+    border-radius: 5px; /* Bordes redondeados para el thumb */
+}

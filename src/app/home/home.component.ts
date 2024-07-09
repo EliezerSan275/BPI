@@ -1,24 +1,22 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { ProyectoPrioritarioComponent } from './proyecto-prioritario/proyecto-prioritario.component';
-import { MainHeaderComponent } from './main-header/main-header.component';
-import { BtnLargoComponent } from './btn-largo/btn-largo.component';
+import { ProyectoPrioritarioComponent } from '../proyecto-prioritario/proyecto-prioritario.component';
+import { BtnLargoComponent } from '../btn-largo/btn-largo.component';
+import { CompaniComponent } from '../compani/compani.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, 
             ProyectoPrioritarioComponent, 
-            MainHeaderComponent, 
             BtnLargoComponent,
             RouterOutlet,
-            RouterLink],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+            RouterLink,
+          CompaniComponent],
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.css'
 })
-export class AppComponent {
-  title = 'BPI';
+export class HomeComponent {
   numerodeProyectos =5;
 
   

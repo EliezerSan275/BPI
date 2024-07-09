@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="section">
+        <span>{{ nombreProyecto[index] }}</span>
+        <div class="estatus-{{ estatusActividad[index] === 0 ? 'activo' : 
+                                estatusActividad[index] === 1 ? 'pausado' : 'inactivo' }}">
+        </div>
+    </div>
+    <div class="section">PRÓXIMA ENTREGA: {{ fechasEntrega[index] }}</div>
+    <div class="section">
+        ESTATUS:&nbsp;
+        <span class="progress-{{estatusPorcentaje[index] <= 20 ? '20' : 
+                                estatusPorcentaje[index] <= 40 ? '40' :
+                                estatusPorcentaje[index] <= 60 ? '60' :
+                                estatusPorcentaje[index] <= 80 ? '80' : '100' }}">
+            {{ estatusPorcentaje[index] }}%
+        </span>
+    </div>
+</div>

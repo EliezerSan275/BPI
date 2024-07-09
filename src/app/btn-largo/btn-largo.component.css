@@ -1,0 +1,22 @@
+button {
+    width: 80%; /* El botón ocupará el 80% del ancho del contenedor */
+    height: 14vh; /* La altura será 14% del viewport height */
+    padding: 2vh; /* Padding basado en el viewport height */
+    box-sizing: border-box; /* Incluye el padding y el borde dentro del ancho total del botón */
+    background: var(--primary-100);
+    color: var(--greyscale-100); /* Color del texto */
+    border: none; /* Elimina el borde visible */
+    border-radius: 15px; /* Bordes redondeados */
+    font-size: 2vw; /* Tamaño del texto basado en el viewport width */
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Añade sombra uniforme */
+    text-align: center; /* Centra el texto horizontalmente */
+    display: flex; /* Usa flexbox para centrar verticalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+button:hover {
+    background: var(--primary-100-hover);
+    cursor: pointer;
+}

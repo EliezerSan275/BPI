@@ -1,0 +1,30 @@
+
+<main>
+    <div class="btnPrincipales">
+      <app-btn-largo [btnTexto]='txtBtnPrincipales[0]' (click)="navigateTo('compani')"></app-btn-largo>
+      <app-btn-largo [btnTexto]='txtBtnPrincipales[1]' (click)="navigateTo('proyectosPrioritarios')"></app-btn-largo>
+      <app-btn-largo [btnTexto]='txtBtnPrincipales[2]' (click)="navigateTo('pruebas')"></app-btn-largo>
+    </div>
+  
+  
+    
+    <div class="proyectosPrioritarios">
+      <h2>PROYECTOS PRIORITARIOS</h2>
+      <div class="scrollbar">
+        @defer (on viewport) {
+          <app-proyecto-prioritario [index]="0"></app-proyecto-prioritario>
+          <app-proyecto-prioritario [index]="1"></app-proyecto-prioritario>
+          <app-proyecto-prioritario [index]="2"></app-proyecto-prioritario>
+          <app-proyecto-prioritario [index]="3"></app-proyecto-prioritario>
+          <app-proyecto-prioritario [index]="4"></app-proyecto-prioritario>
+          <app-proyecto-prioritario [index]="1"></app-proyecto-prioritario>
+          <app-proyecto-prioritario [index]="0"></app-proyecto-prioritario>
+          <app-proyecto-prioritario [index]="1"></app-proyecto-prioritario>
+          <app-proyecto-prioritario [index]="0"></app-proyecto-prioritario>
+          <app-proyecto-prioritario [index]="1"></app-proyecto-prioritario>
+        } @placeholder {
+          <p> </p>
+        }
+      </div>
+    </div>
+  </main>

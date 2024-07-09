@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Ensures no scrollbar appears */
+
+    /* COLORES PRIMARIOS */
+    --primary-900: #0C3C5E;
+    --primary-700: #01497b;
+    --primary-500: #005a98;
+    --primary-300: #1883cd;
+    --primary-100: #7eb5db;
+
+    --primary-100-hover: #64a9d7;
+
+    /* ESCALA GRISES */
+    --greyscale-900: #01121d;
+    --greyscale-700: #283944;
+    --greyscale-500: #3e4c56;
+    --greyscale-300: #72828c;
+    --greyscale-200: #99acb9;
+    --greyscale-100: #cdd8e0;
+
+    
+    /* PROGRESION */
+    --progress-20: #ff0d01;
+    --progress-40: #ff7801;
+    --progress-60: #ffd701;
+    --progress-80: #b3d901;
+    --progress-100: #55dc01;
+
+    /* PRIORIDAD */
+    --priority-20: #ff0d01;
+    --priority-60: #ff7801;
+    --priority-100: #cdd8e0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0; /* Ensures no margin on the body */
+    padding: 0; /* Ensures no padding on the body */
+    overflow: hidden; /* Ensures no scrollbar appears */
+    width: 100vw; /* Ensures body takes up full viewport width */
+    height: 100vh; /* Ensures body takes up full viewport height */
+    background: linear-gradient(to right, #1E435D,  var(--primary-300));
+    color: var(--greyscale-100);
+}

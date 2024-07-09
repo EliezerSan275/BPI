@@ -1,0 +1,63 @@
+.container {
+    width: 100%;
+    border: 3px solid var(--greyscale-100);
+    border-radius: 10px;
+    display: flex;
+    padding: 10px; /* Ajustar el padding según sea necesario */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.section {
+    flex: 1;
+    padding: 10px; /* Ajustar el padding según sea necesario */
+    text-align: center;
+    display: flex; /* Alineación interna de los elementos */
+    align-items: center; /* Alinear verticalmente los elementos */
+}
+
+.section > span {
+    margin-right: 10px; /* Espacio entre el texto y el estado */
+}
+
+.estatus-activo, .estatus-inactivo, .estatus-pausado  {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 5px; /* Espacio entre el texto y el estado */
+}
+
+.estatus-activo {
+    background-color: var(--priority-20);
+}
+.estatus-pausado {
+    background-color: var(--priority-60);
+}
+
+.estatus-inactivo {
+    background-color: var(--priority-100);
+}
+
+
+/* Clases para los colores de progreso */
+.progress-20 {
+    color: var(--progress-20);
+}
+
+.progress-40 {
+    color: var(--progress-40);
+}
+
+.progress-60 {
+    color: var(--progress-60);
+}
+
+.progress-80 {
+    color: var(--progress-80);
+}
+
+.progress-100 {
+    color: var(--progress-100);
+}
