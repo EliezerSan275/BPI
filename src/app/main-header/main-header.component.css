@@ -18,6 +18,12 @@
     flex: 5; /* Ocupa el 50% del espacio disponible */
     font-weight: bold;
     font-size: 2vw; /* Tamaño de letra ajustado */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.large-section img{
+    margin-right: 12px;
 }
 
 .logo {
