@@ -1,4 +1,10 @@
-<app-main-header></app-main-header>
-<container-card></container-card>
-<menu></menu>
+<div class="overlay" *ngIf="menuVisible" (click)="toggleDropdown()"></div>
+
+<app-main-header (toggleDropdown)="toggleDropdown()"></app-main-header>
+
+<div class="container">
+     <container-card></container-card>  
+</div>
+
+<menu [menuVisible]="menuVisible"></menu>
 <router-outlet></router-outlet>

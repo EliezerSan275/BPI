@@ -4,7 +4,7 @@
 }
 
 .dropdown-content {
-  display: none;
+  display: block;
   position: fixed;
   top: 0;
   right: 0;
@@ -19,6 +19,7 @@
   overflow-y: auto;
   text-align: center;
   transition: ease-in-out;
+  z-index: 20;
 }
 
 .dropdown-content.show {

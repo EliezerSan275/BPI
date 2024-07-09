@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { ProyectoPrioritarioComponent } from './proyecto-prioritario/proyecto-prioritario.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
 import { BtnLargoComponent } from './btn-largo/btn-largo.component';
+import { ContainerCardComponent } from './container-card/container-card.component';
+import { MenuComponent } from './menu/menu.component';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +15,10 @@ import { BtnLargoComponent } from './btn-largo/btn-largo.component';
             MainHeaderComponent, 
             BtnLargoComponent,
             RouterOutlet,
-            RouterLink],
+            ContainerCardComponent,
+            MenuComponent,
+            RouterLink,
+            CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -30,5 +35,13 @@ export class AppComponent {
 
   navigateTo(route: string) {
     this.router.navigate([route]);
+  }
+
+
+  //-----------------DESLIZAMIENTO DE LA BARRA LATERAL-------------------------------------
+  menuVisible: boolean = false;
+
+  toggleDropdown() {
+    this.menuVisible = !this.menuVisible;
   }
 }

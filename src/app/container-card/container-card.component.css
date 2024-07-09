@@ -1,88 +1,88 @@
-.company-content{
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     padding: 5px;
-     gap: 10px;
-     width: 100%;
-     height: 100%;
-     background: linear-gradient(to right, rgb(31,51,65) , rgb(24,131,205));
-   }
-   
-   .image {
-     display: block;
-     width: 90%;
-     align-items: start;
-     justify-items: start;
-     height: 40px;
-     margin: 5px;
-     margin-top: 10px;
-   }
-   
-   .image img {
-     height: 100%;
-     width: auto;
-   }
-   
-   .image button{
-     height: inherit;
-     width: 50px;
-     position: absolute;
-     right: 100px;
-   }
-   
-   .company-grid {
-     display: flex;
-     flex-direction: column;
-     width: 90%;
-     height: 85%;
-     align-items: center;
-     background-color: rgb(126, 181, 219);
-     box-shadow: 5px 5px 15px rgb(2, 18, 29);
-     border-radius: 15px;
-   }
-   
-   .grid-header{
-     display: flex;
-     width: 90%;
-     justify-content: center;
-     padding: 0;
-     margin: 0;
-   }
-   
-   .grid-header h1 {
-     color: white;
-     font-size: 3em;
-   }
-   
-   .grid-card {
-     overflow: auto;
-     display: grid;
-     grid-template-columns: repeat(3, 32%);
-     width: 98%;
-     gap: 25px;
-     overflow-x: hidden;
-     margin-left: 12px;
-     padding: 15PX;
-   }
-   
-   .grid-card::-webkit-scrollbar {
-     width: 1px;               
-   }
-   
-   .button-div{
-     display: flexbox;
-     position: absolute;
-     height: 60px;
-     width: 60px;
-     right: 150px;
-     bottom: 50px;
-     cursor: pointer;
-   }
-   
-   .button-div img {
-     width: auto;
-     height: auto;
-     background-color: white;
-     border-radius: 50%;
-   }
+.company-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgb(31, 51, 65), rgb(24, 131, 205));
+}
+
+.image {
+  display: block;
+  width: 90%;
+  align-items: start;
+  justify-items: start;
+  height: 40px;
+  margin: 5px;
+  margin-top: 10px;
+}
+
+.image img {
+  height: 100%;
+  width: auto;
+}
+
+.image button {
+  height: inherit;
+  width: 50px;
+  position: absolute;
+  right: 100px;
+}
+
+.company-grid {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 85%;
+  align-items: center;
+  background-color: rgb(126, 181, 219);
+  box-shadow: 5px 5px 15px rgb(2, 18, 29);
+  border-radius: 15px;
+}
+
+.grid-header {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.grid-header h1 {
+  color: white;
+  font-size: 3em;
+}
+
+.grid-card {
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  width: 98%;
+  gap: 25px;
+  overflow-x: hidden;
+  margin-left: 12px;
+  padding: 15px;
+}
+
+.grid-card::-webkit-scrollbar {
+  width: 1px;
+}
+
+.button-div {
+  display: flexbox;
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  right: 150px;
+  bottom: 30px;
+  cursor: pointer;
+}
+
+.button-div img {
+  width: auto;
+  height: auto;
+  background-color: white;
+  border-radius: 50%;
+}
