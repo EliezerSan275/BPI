@@ -1,8 +1,7 @@
 .card {
   background-color: rgb(205, 216, 224);
-  height: 200px;
+  height: 20vh;
   border-radius: 10px;
-  min-height: 150px;
   font-weight: bold;
   position: relative;
   overflow: hidden;
@@ -36,4 +35,28 @@
   margin: 0px;
   justify-content: center;
   font-weight: 100;
+}
+
+/* Media query para tabletas */
+@media (max-width: 1024px) {
+  
+  .text h2 {
+    font-size: 2em;
+  }
+  
+  .text p {
+    font-size: 1.5em;
+  }
+}
+/* Media query para telefonos */
+@media (max-width: 720px) {
+  
+  .text h2 {
+    font-size: 1.5em;
+    margin-bottom: 0px;
+  }
+  
+  .text p {
+    font-size: 1em;
+  }
 }

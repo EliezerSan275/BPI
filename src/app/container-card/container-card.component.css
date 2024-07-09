@@ -35,7 +35,7 @@
   display: flex;
   flex-direction: column;
   width: 90%;
-  height: 85%;
+  height: 75%;
   align-items: center;
   background-color: rgb(126, 181, 219);
   box-shadow: 5px 5px 15px rgb(2, 18, 29);
@@ -46,8 +46,10 @@
   display: flex;
   width: 90%;
   justify-content: center;
-  padding: 0;
-  margin: 0;
+}
+
+h1{
+  margin: 2vh;
 }
 
 .grid-header h1 {
@@ -56,14 +58,13 @@
 }
 
 .grid-card {
-  overflow: auto;
+  overflow-y: auto;
   display: grid;
-  grid-template-columns: repeat(3, 32%);
+  grid-template-columns: repeat(3, 30%);
   width: 98%;
   gap: 25px;
   overflow-x: hidden;
-  margin-left: 12px;
-  padding: 15px;
+  justify-content: center;
 }
 
 .grid-card::-webkit-scrollbar {
@@ -73,16 +74,68 @@
 .button-div {
   display: flexbox;
   position: absolute;
-  height: 60px;
-  width: 60px;
-  right: 150px;
-  bottom: 30px;
+  height: 6vh;
+  width: 6vh;
+  right: 5%;
+  bottom: 7%;
   cursor: pointer;
 }
 
 .button-div img {
-  width: auto;
-  height: auto;
+  height: 100%;
   background-color: white;
   border-radius: 50%;
+}
+
+
+/* Estilo específico para WebKit (Chrome, Safari, Opera) */
+.grid-card::-webkit-scrollbar {
+  width: 10px; /* Grosor de la scrollbar */
+}
+
+.grid-card::-webkit-scrollbar-track {
+  background-color: transparent; /* Color de fondo de la pista de la scrollbar */
+}
+
+.grid-card::-webkit-scrollbar-thumb {
+  background-color:  var(--greyscale-100); /* Color del thumb (barra deslizadora) */
+  border-radius: 5px; /* Bordes redondeados para el thumb */
+}
+
+
+/* Media query para tabletas */
+@media (max-width: 1024px) {
+  .grid-header h1 {
+    color: white;
+    font-size: 3.2em;
+  }
+  .grid-card {
+    overflow: auto;
+    grid-template-columns: repeat(2, 40%);
+    justify-content: center;
+  }
+  .button-div {
+    bottom: 5%;
+  }
+  
+}
+
+/* Media query para telefonos */
+@media (max-width: 720px) {
+  .grid-header h1 {
+    color: white;
+    font-size: 2em;
+  }
+  .grid-card {
+    overflow: auto;
+    grid-template-columns: repeat(2, 40%);
+    justify-content: center;
+  }
+  .button-div {
+    bottom: 5%;
+  }
+
+  .grid-card::-webkit-scrollbar {
+    width: 5px; /* Grosor de la scrollbar */
+  }
 }
