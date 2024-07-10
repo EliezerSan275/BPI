@@ -7,7 +7,7 @@
     box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
     margin-bottom: 10px;
     font-weight: bold;
-    font-size: 1vw;
+    font-size: 1em;
 }
 
 .section {
@@ -23,8 +23,8 @@
 }
 
 .estatus-activo, .estatus-inactivo, .estatus-pausado  {
-    width: 20px;
-    height: 20px;
+    width: 2vh;
+    height: 2vh;
     border-radius: 50%;
     margin-left: 5px; /* Espacio entre el texto y el estado */
 }
@@ -60,4 +60,20 @@
 
 .progress-100 {
     color: var(--progress-100);
+}
+
+
+/* Media query para tabletas */
+@media (max-width: 1024px) {
+    .container {
+        font-size: 1em;
+    }
+}
+
+/* Media query para telefonos */
+@media (max-width: 720px) {
+    .container {
+        font-size: .5em;
+    }
+    
 }

@@ -20,3 +20,15 @@ button:hover {
     background: var(--primary-100-hover);
     cursor: pointer;
 }
+
+
+/* Media query para tabletas */
+@media (max-width: 1024px) {
+    button{
+        height: 10vh; /* La altura será 14% del viewport height */
+    }
+}
+
+/* Media query para telefonos */
+@media (max-width: 720px) {
+}

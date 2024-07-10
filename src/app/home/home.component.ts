@@ -10,7 +10,6 @@ import { CompaniComponent } from '../compani/compani.component';
   imports: [RouterOutlet, 
             ProyectoPrioritarioComponent, 
             BtnLargoComponent,
-            RouterOutlet,
             RouterLink,
           CompaniComponent],
   templateUrl: './home.component.html',
