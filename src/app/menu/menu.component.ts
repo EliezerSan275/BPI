@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { MenubuttonComponent } from "../menubutton/menubutton.component";
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+import { GlobalServices } from '../global-Services';
 
 @Component({
   selector: 'menu',
@@ -12,4 +14,10 @@ import { CommonModule } from '@angular/common';
 export class MenuComponent {
 
   @Input() menuVisible!: boolean;
+
+  constructor(private router: Router, private global:GlobalServices) {}
+
+  navigateTo() {
+    this.router.navigate([this.global.getBeforeScreen()]);
+  }
 }

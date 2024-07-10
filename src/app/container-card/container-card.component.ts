@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { GlobalServices } from '../global-Services';
 
 @Component({
   selector: 'container-card',
@@ -14,9 +15,10 @@ import { Router, RouterLink, RouterOutlet } from '@angular/router';
   styleUrl: './container-card.component.css'
 })
 export class ContainerCardComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private global: GlobalServices) {}
 
   navigateTo(route: string) {
+    this.global.setBeforeScreen('');
     this.router.navigate([route]);
   }
 }

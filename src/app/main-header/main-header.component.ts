@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router, RouteReuseStrategy } from '@angular/router';
 
 @Component({
   selector: 'app-main-header',
@@ -14,5 +15,11 @@ export class MainHeaderComponent {
 
   onToggleMenu() {
     this.toggleDropdown.emit();
+  }
+
+  constructor(private router: Router) {}
+
+  navigateTo(route: string) {
+    this.router.navigate([route]);
   }
 }
