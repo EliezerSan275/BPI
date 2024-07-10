@@ -6,7 +6,7 @@
   gap: 10px;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgb(31, 51, 65), rgb(24, 131, 205));
+  background: linear-gradient(to right, var(--grad-01), var(--grad-02));
 }
 
 .image {
@@ -38,7 +38,7 @@
   height: 75%;
   align-items: center;
   background-color: rgb(126, 181, 219);
-  box-shadow: 5px 5px 15px rgb(2, 18, 29);
+  box-shadow: 5px 5px 15px var(--greyscale-700);
   border-radius: 15px;
 }
 

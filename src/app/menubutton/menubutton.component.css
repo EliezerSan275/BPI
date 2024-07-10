@@ -4,29 +4,29 @@ li a {
   justify-content: center;
   padding: 12px 15px;
   text-decoration: none;
-  color: rgb(2, 18, 29);
+  color: var(--greyscale-700);
   font-weight: bold;
   font-size: 22px;
   width: 100%;
 }
 
 li a:hover {
-  color: rgb(1, 73, 123);
+  color: var(--primary-700);
 }
 
 li {
-  color: rgb(2, 18, 18);
+  color: var(--greyscale-700);
   margin: 15px;
   margin-left: 50px;
   margin-right: 50px;
   text-decoration: none;
   display: flex;
-  background-color: rgb(126, 181, 219);
+  background-color: var(--primary-100);
   border-radius: 13px;
   cursor: pointer;
   align-items: flex-start;
 }
 
 li:hover {
-  box-shadow: 5px 5px 15px rgb(2, 18, 29);
+  box-shadow: 5px 5px 15px var(--greyscale-700);
 }

@@ -7,7 +7,7 @@
   overflow: hidden;
   background-size: cover;
   background-position: center center;
-  box-shadow: 5px 5px 15px rgb(62, 76, 86);
+  box-shadow: 5px 5px 15px var(--sombra-1);
 }
 
 .text {
@@ -19,7 +19,7 @@
   align-items: center;
 }
 .text h2 {
-  color: rgb(2, 18, 29);
+  color: var(--greyscale-700);
   font-weight: bold;
   font-size: 2.5em;
   height: 50px;
@@ -29,7 +29,7 @@
 
 .text p {
   display: flex;
-  color: rgb(2, 18, 29);
+  color: var(--greyscale-700);
   width: 100%;
   font-size: 1.2em;
   margin: 0px;

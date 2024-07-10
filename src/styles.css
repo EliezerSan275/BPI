@@ -35,6 +35,15 @@
     --priority-20: #ff0d01;
     --priority-60: #ff7801;
     --priority-100: #cdd8e0;
+
+    /* SOMBRAS */
+    --sombra-1: #3E4C56;
+    --sombra-2: #000002;
+
+    /* GRADIENTE */
+    --grad-01: #1F3341;
+    --grad-02: #1883CD;
+
 }
 
 body {
