@@ -3,18 +3,17 @@ import { CardComponent } from '../card/card.component';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'container-card',
+  selector: 'app-contratos',
   standalone: true,
   imports: [
     CardComponent,
     RouterOutlet,
-    RouterLink,
+    RouterLink
   ],
-  templateUrl: './container-card.component.html',
-  styleUrl: './container-card.component.css'
+  templateUrl: './contratos.component.html',
+  styleUrl: './contratos.component.css'
 })
-
-export class ContainerCardComponent {
+export class ContratosComponent {
   constructor(private router: Router) {}
 
   navigateTo(route: string) {

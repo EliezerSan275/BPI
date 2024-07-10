@@ -3,11 +3,13 @@ import { ProyectoPrioritarioComponent } from './proyecto-prioritario/proyecto-pr
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ContainerCardComponent } from './container-card/container-card.component';
+import { ContratosComponent } from './contratos/contratos.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
     {path: 'proyectosPrioritarios', component: ProyectoPrioritarioComponent},
     {path: 'compani', component: ContainerCardComponent},
+    {path: 'contratos', component: ContratosComponent},
     {path: '**', component: PageNotFoundComponent}
 ];

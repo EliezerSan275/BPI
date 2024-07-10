@@ -41,7 +41,4 @@
     img {
         max-width: 70%; /* En tabletas, las imágenes ocupan el 70% del ancho */
     }
-    .logo{
-        max-width: 30px;
-    }
 }
