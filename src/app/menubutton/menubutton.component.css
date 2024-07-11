@@ -2,11 +2,11 @@ li a {
   display: flex;
   align-self: center;
   justify-content: center;
-  padding: 12px 15px;
+  padding: 3vh 15px;
   text-decoration: none;
   color: var(--greyscale-700);
   font-weight: bold;
-  font-size: 22px;
+  font-size: 1.5em;
   width: 100%;
 }
 
@@ -29,4 +29,23 @@ li {
 
 li:hover {
   box-shadow: 5px 5px 15px var(--greyscale-700);
+}
+
+/* Media query para tabletas */
+@media (max-width: 1024px) {
+  .dropdown-content{
+    min-width: 512px;
+  }
+}
+
+/* Media query para telefonos */
+@media (max-width: 720px) {
+  li{
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+  li a{
+    padding: 2vh 2vh;
+    font-size: .8em;
+  }
 }
