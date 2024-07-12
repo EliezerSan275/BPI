@@ -74,7 +74,7 @@ export class HomeComponent {
       }
     ]
   };
-  
+
   gridCards2 = {
     "gridCards": [
       {
@@ -130,6 +130,61 @@ export class HomeComponent {
     ]
   };
 
+  gridCards3 = {
+    "gridCards": [
+      {
+        "nameCompany": "PROYECTO XY",
+        "numberContract": "COMPAÑIA: XY",
+        "numberProyect": "CONTRATO: YN"
+      },
+      {
+        "nameCompany": "PROYECTO XY",
+        "numberContract": "COMPAÑIA: XY",
+        "numberProyect": "CONTRATO: YN"
+      },
+      {
+        "nameCompany": "PROYECTO XY",
+        "numberContract": "COMPAÑIA: XY",
+        "numberProyect": "CONTRATO: YN"
+      },
+      {
+        "nameCompany": "PROYECTO XY",
+        "numberContract": "COMPAÑIA: XY",
+        "numberProyect": "CONTRATO: YN"
+      },
+      {
+        "nameCompany": "PROYECTO XY",
+        "numberContract": "COMPAÑIA: XY",
+        "numberProyect": "CONTRATO: YN"
+      },
+      {
+        "nameCompany": "PROYECTO XY",
+        "numberContract": "COMPAÑIA: XY",
+        "numberProyect": "CONTRATO: YN"
+      },
+      {
+        "nameCompany": "PROYECTO XY",
+        "numberContract": "COMPAÑIA: XY",
+        "numberProyect": "CONTRATO: YN"
+      },
+      {
+        "nameCompany": "PROYECTO XY",
+        "numberContract": "COMPAÑIA: XY",
+        "numberProyect": "CONTRATO: YN"
+      },
+      {
+        "nameCompany": "PROYECTO XY",
+        "numberContract": "COMPAÑIA: XY",
+        "numberProyect": "CONTRATO: YN"
+      },
+      {
+        "nameCompany": "PROYECTO XY",
+        "numberContract": "COMPAÑIA: XY",
+        "numberProyect": "CONTRATO: YN"
+      }
+    ]
+  };
+
   txtBtnPrincipales = ['COMPAÑÍAS', 'CONTRATOS', 'PROYECTOS'];
   showMainContent = true;
 
@@ -137,14 +192,14 @@ export class HomeComponent {
 
   navigateTo(route: string, ruta: string) {
     this.dataService.setData2(ruta);
-    if(ruta == 'COMPAÑIAS'){
+    if(ruta == 'compañia'){
       this.dataService.setData(this.gridCards1);
       this.router.navigate([route]);
-    }else if(ruta == 'CONTRATOS'){
+    }else if(ruta == 'contratos'){
       this.dataService.setData(this.gridCards2);
       this.router.navigate([route]);
-    }else{
-      this.dataService.setData(this.gridCards2);
+    }else if(ruta == 'proyectos'){
+      this.dataService.setData(this.gridCards3);
       this.router.navigate([route]);
     }
   }
