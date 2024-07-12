@@ -20,16 +20,14 @@ import { MenuComponent } from './menu/menu.component';
             RouterLink,
             CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'BPI';
-  numerodeProyectos =5;
-
-  
+  numerodeProyectos = 5;
   txtBtnPrincipales = ['COMPAÑÍAS', 'CONTRATOS', 'PROYECTOS'];
-
   showMainContent = true; // Controla la visibilidad del contenido principal
+  menuVisible: boolean = false;
 
   constructor(private router: Router) {}
 
@@ -37,11 +35,4 @@ export class AppComponent {
     this.router.navigate([route]);
   }
 
-
-  //-----------------DESLIZAMIENTO DE LA BARRA LATERAL-------------------------------------
-  menuVisible: boolean = false;
-
-  toggleDropdown() {
-    this.menuVisible = !this.menuVisible;
-  }
 }

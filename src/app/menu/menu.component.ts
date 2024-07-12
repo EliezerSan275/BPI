@@ -7,9 +7,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [MenubuttonComponent, CommonModule],
   templateUrl: './menu.component.html',
-  styleUrl: './menu.component.css'
+  styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-
   @Input() menuVisible!: boolean;
 }

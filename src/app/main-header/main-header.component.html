@@ -10,3 +10,7 @@
     <img (click)="onToggleMenu()" class="svg" src="icon_settings.svg" />
   </div>
 </header>
+
+<div class="overlay" [ngClass]="{'visible': menuVisible}" (click)="toggleDropdown()">
+  <menu [menuVisible]="menuVisible"></menu>
+</div>

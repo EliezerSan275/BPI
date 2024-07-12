@@ -1,6 +1,7 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, Input, HostBinding } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { MenuComponent } from '../menu/menu.component'; // Importa el componente MenuComponent
 
 @Component({
   selector: 'app-main-header',
@@ -8,24 +9,26 @@ import { Router, RouterLink, RouterOutlet } from '@angular/router';
   imports: [
     CommonModule,
     RouterOutlet,
-    RouterLink
+    RouterLink,
+    MenuComponent // Añade MenuComponent a los imports
   ],
   templateUrl: './main-header.component.html',
   styleUrls: ['./main-header.component.css']
 })
 export class MainHeaderComponent {
-  isSearchVisible = false; // Controla la visibilidad del campo de búsqueda
+  menuVisible: boolean = false;
 
   constructor(private router: Router) {}
-
-  @Output() toggleDropdown = new EventEmitter<void>();
 
   navigateTo(route: string) {
     this.router.navigate([route]);
   }
 
   onToggleMenu() {
-    this.toggleDropdown.emit();
+    this.menuVisible = !this.menuVisible;
   }
 
+  toggleDropdown() {
+    this.menuVisible = false;
+  }
 }
