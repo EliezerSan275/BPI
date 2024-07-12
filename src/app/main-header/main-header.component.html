@@ -1,22 +1,11 @@
 <header class="main-header">
   <div class="section">
-    <img class="svg" src="icon_search.svg" (click)="toggleSearchVisibility()" />
-  </div>
-  <div class="section">
-    <form action="./search/" class="search" *ngIf="isSearchVisible">
-      <div class="input-container">
-        <input type="search" id="movie" name="q" (input)="onInputChange($event)" />
-      </div>
-    </form>
-    
-    
-  
+    <div class="section"><img class="svg" src="icon_report.svg" /></div>
   </div>
   <div class="section large-section" (click)="navigateTo('')">
     <img class="logo" src="LOGO_1.png" />
     BITÁCORA DE PROYECTOS DE INFRAESTRUCTURA
   </div>
-  <div class="section"><img class="svg" src="icon_report.svg" /></div>
   <div class="section">
     <img (click)="onToggleMenu()" class="svg" src="icon_settings.svg" />
   </div>
