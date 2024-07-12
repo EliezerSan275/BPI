@@ -1,0 +1,23 @@
+<div class="contratos-content">
+    <div class="image" (click)="navigateTo('')">
+        <img src="atras.png" alt="" />
+    </div>
+    <div class="contratos-grid">
+        <div class="grid-header">
+            <h1>{{ruta}}</h1>
+        </div>
+        <div class="grid-card">
+            <div  *ngFor="let card of gridCards.gridCards">
+                <card [nameCompany]="card.nameCompany"
+                    [numberContract]="card.numberContract" 
+                    [numberProyect]="card.numberProyect">
+                </card>
+            </div>
+            
+        </div>
+
+        <div class="button-div">
+            <img src="plus-ico.png" alt="" />
+        </div>
+    </div>
+</div>
