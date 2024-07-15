@@ -6,7 +6,7 @@ li a {
   text-decoration: none;
   color: var(--greyscale-700);
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 2em;
   width: 100%;
 }
 
@@ -17,8 +17,8 @@ li a:hover {
 li {
   color: var(--greyscale-700);
   margin: 15px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 150px;
+  margin-right: 150px;
   text-decoration: none;
   display: flex;
   background-color: var(--primary-100);
@@ -36,6 +36,10 @@ li:hover {
   .dropdown-content{
     min-width: 512px;
   }
+  li{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 }
 
 /* Media query para telefonos */
@@ -46,6 +50,6 @@ li:hover {
   }
   li a{
     padding: 2vh 2vh;
-    font-size: .8em;
+    font-size: 1.6em;
   }
 }

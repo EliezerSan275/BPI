@@ -31,4 +31,7 @@ export class MainHeaderComponent {
   toggleDropdown() {
     this.menuVisible = false;
   }
+  navigateToReportes() {
+    this.router.navigate(['reportes']); // Navega a la ruta de reportes
+  }
 }

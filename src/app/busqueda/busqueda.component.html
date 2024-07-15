@@ -1,19 +1,40 @@
 <div class="contratos-content">
-    <div class="image" (click)="navigateTo('')">
-        <img src="atras.png" alt="" />
+    <div class="header-buscador">
+        <img src="atras.png" alt="" (click)="navigateTo('')" style="align-self: center; justify-self: start;" />
+        <div class="custom-dropdown">
+            <img src="icon_filter.svg" class="dropdown-icon" alt="Filtro" (click)="toggleDropdown()" />
+            <div class="dropdown-content" [ngClass]="{ 'show': dropdownOpen }">
+                <label>
+                    <input type="checkbox" value="opcion3" (change)="toggleOption('opcion1', $event)"> Opción 1
+                  </label>
+                  
+                <label>
+                    <input type="checkbox" value="opcion3" (change)="toggleOption('opcion2', $event)"> Opción 2
+                  </label>
+                  
+                <label>
+                    <input type="checkbox" value="opcion3" (change)="toggleOption('opcion3', $event)"> Opción 3
+                  </label>
+                  
+            </div>
+        </div>
     </div>
+    
+    
+
+
+
     <div class="contratos-grid">
         <div class="grid-header">
             <h1>{{ ruta | uppercase }}</h1>
         </div>
         <div class="grid-card">
-            <div  *ngFor="let card of gridCards.gridCards">
-                <card [nameCompany]="card.nameCompany"
-                    [numberContract]="card.numberContract" 
+            <div *ngFor="let card of gridCards.gridCards">
+                <card [nameCompany]="card.nameCompany" [numberContract]="card.numberContract"
                     [numberProyect]="card.numberProyect">
                 </card>
             </div>
-            
+
         </div>
 
         <div class="button-div">

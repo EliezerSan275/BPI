@@ -19,6 +19,22 @@ import { DataService } from '../data.service';
 export class BusquedaComponent implements OnInit {
   gridCards: any;
   ruta: any;
+  dropdownOpen = false;
+
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+  toggleOption(option: string, event: Event) {
+    const inputElement = event.target as HTMLInputElement;
+    const checked = inputElement.checked;
+  
+    if (checked) {
+      console.log('Opción seleccionada:', option);
+    } else {
+    }
+  }
+  
+
 
   constructor(private router: Router, private dataService: DataService) {}
 
