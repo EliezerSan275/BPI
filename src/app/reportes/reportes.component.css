@@ -1,0 +1,143 @@
+/* Estilos generales */
+.reportes-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.header-buscador {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    height: 40px;
+    width: 85%;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.header-buscador img {
+    cursor: pointer;
+    width: 50px;
+}
+
+.header-buscador h1 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+}
+
+.dropdown-icon {
+    cursor: pointer;
+    width: 50px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    color: var(--greyscale-900);
+    background-color: var(--greyscale-100);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 5%;
+    border-radius: 10px;
+}
+
+.dropdown-content label {
+    display: block;
+    padding: 8px 12px;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.reportes-contenedor {
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    width: 90%;
+    height: 75%;
+    align-items: center;
+    background-color: var(--primary-100);
+    box-shadow: 5px 5px 15px var(--greyscale-700);
+    border-radius: 15px;
+    padding: 10px; /* Agregamos un padding para separar el contenido del borde */
+}
+
+
+.tabla {
+    margin: 15px;
+}
+
+.tabla table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla thead {
+    background: var(--primary-700);
+    color: var(--primary-100);
+}
+
+.tabla tbody {
+    background: var(--priority-100);
+    color: var(--greyscale-900);
+    font-weight: bold;
+}
+
+.tabla td, .tabla th {
+    padding: 10px;
+    border: 3px solid var(--greyscale-300);
+}
+
+.imagen-tipo {
+    width: 35px;
+    height: auto;
+}
+
+/* Scrollbar personalizada para WebKit */
+.reportes-contenedor::-webkit-scrollbar {
+    width: 10px;
+}
+
+.reportes-contenedor::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.reportes-contenedor::-webkit-scrollbar-thumb {
+    background-color: var(--greyscale-100);
+    border-radius: 5px;
+}
+
+/* Media Queries para responsive design */
+
+@media screen and (max-width: 1024px) {
+    .reportes-contenedor {
+        width: 95%;
+        height: 70%; /* Reducimos un poco la altura para evitar el scrollbar en algunos casos */
+        overflow-x: auto;
+    }
+    .tabla{
+        margin-left: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .reportes-contenedor {
+        width: 90%;
+        height: 60%; /* Ajustamos la altura más pequeña para pantallas más pequeñas */
+    }
+    .tabla{
+        margin-left: 800px;
+    }
+}

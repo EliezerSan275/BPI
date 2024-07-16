@@ -104,6 +104,52 @@ menu {
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    color: var(--greyscale-900);
+    background-color: var(--greyscale-100);
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 250%;
+    padding: 16px 20px;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    text-align: center; /* Centra los botones horizontalmente */
+}
+
+.dropdown-content button {
+    display: block;
+    padding: 16px 24px;
+    margin: 20px;
+    text-decoration: none;
+    color: var(--greyscale-100);
+    background: linear-gradient(to right, #1E435D,  var(--primary-300));
+    width: 80%; /* Ajusta el ancho de los botones si es necesario */
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--greyscale-200);
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+
 /* Media query para tabletas */
 @media (max-width: 1024px) {
     img {

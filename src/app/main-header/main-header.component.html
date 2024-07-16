@@ -1,10 +1,17 @@
-<header class="main-header">
+<header class="main-header" (click)="onHeaderClick($event)">
   <div class="section">
     <div class="section">
-      <img class="svg" src="icon_report.svg" (click)="navigateTo('reportes')" />
+      <div class="custom-dropdown">
+        <img class="svg" src="icon_report.svg" (click)="toggleDropdown2($event)" />
+        <div class="dropdown-content" [ngClass]="{ 'show': dropdownOpen }">
+          <button (click)="navigateTo('reportes', 'FINALIZADOS')">Finalizados</button>
+          <button (click)="navigateTo('reportes', 'EN PROCESOS')">En Procesos</button>
+          <button (click)="navigateTo('reportes', 'CANCELADOS')">Cancelados</button>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="section large-section" (click)="navigateTo('')">
+  <div class="section large-section" (click)="navigateTo('', '')">
     <img class="logo" src="LOGO_1.png" />
     BITÁCORA DE PROYECTOS DE INFRAESTRUCTURA
   </div>

@@ -1,0 +1,63 @@
+<!-- reportes.component.html -->
+<div class="reportes-content">
+    <div class="header-buscador">
+        <img src="atras.png" alt="Atrás" (click)="navigateTo('')" style="align-self: center; justify-self: start;" />
+        <h1>REPORTES {{encabezado}}</h1>
+        <div class="custom-dropdown">
+            <img src="icon_filter.svg" class="dropdown-icon" alt="Filtro" (click)="toggleDropdown()" />
+            <div class="dropdown-content" [ngClass]="{ 'show': dropdownOpen }">
+                <label>
+                    <input type="checkbox" value="opcion1" (change)="toggleOption('opcion1', $event)"> Opción 1
+                </label>
+                <label>
+                    <input type="checkbox" value="opcion2" (change)="toggleOption('opcion2', $event)"> Opción 2
+                </label>
+                <label>
+                    <input type="checkbox" value="opcion3" (change)="toggleOption('opcion3', $event)"> Opción 3
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="reportes-contenedor">
+        <!-- Aquí iría el contenido de los reportes -->
+        <div class="tabla">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Tipo</th>
+                        <th>Contrato</th>
+                        <th>Compañía</th>
+                        <th>Obra</th>
+                        <th>Fecha Inicio</th>
+                        <th>(LPO) Contractual</th>
+                        <th>Real/Pronóstico</th>
+                        <th>Av. Prog.</th>
+                        <th>Av. Real</th>
+                        <th>Clasificación</th>
+                    </tr>
+                </thead>
+                <br>
+                <tbody>
+                    <tr *ngFor="let reporte of reportes">
+                        <td>{{ reporte.no }}</td>
+                        <td>
+                            <img [src]="'simb_' + reporte.tipo + '.png'" class="imagen-tipo"
+                                title="{{ reporte.clasificacion }}" alt="Tipo de reporte">
+                        </td>
+                        <td>{{ reporte.contrato }}</td>
+                        <td>{{ reporte.compania }}</td>
+                        <td>{{ reporte.obra }}</td>
+                        <td>{{ reporte.fechaInicio }}</td>
+                        <td>{{ reporte.lpoContractual }}</td>
+                        <td>{{ reporte.realPronostico }}</td>
+                        <td>{{ reporte.avProg }}</td>
+                        <td>{{ reporte.avReal }}</td>
+                        <td>{{ reporte.clasificacion }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

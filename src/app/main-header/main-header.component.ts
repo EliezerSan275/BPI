@@ -1,7 +1,8 @@
-import { Component, EventEmitter, Output, Input, HostBinding } from '@angular/core';
+import { Component, EventEmitter, Output, Input, HostBinding, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { MenuComponent } from '../menu/menu.component'; // Importa el componente MenuComponent
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-main-header',
@@ -17,21 +18,43 @@ import { MenuComponent } from '../menu/menu.component'; // Importa el componente
 })
 export class MainHeaderComponent {
   menuVisible: boolean = false;
+  dropdownOpen: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private dataService: DataService) {}
 
-  navigateTo(route: string) {
+  navigateTo(route: string, ruta: string) {
+    if (ruta === 'EN PROCESOS') {
+      this.dataService.setData(ruta);
+    } else if (ruta === 'FINALIZADOS') {
+      this.dataService.setData(ruta);
+    } else if (ruta === 'CANCELADOS') {
+      this.dataService.setData(ruta);
+    }
     this.router.navigate([route]);
+    this.dropdownOpen = false; // Cierra el dropdown después de navegar
   }
 
   onToggleMenu() {
     this.menuVisible = !this.menuVisible;
   }
 
+  toggleDropdown2(event: Event) {
+    event.stopPropagation();
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+
   toggleDropdown() {
     this.menuVisible = false;
   }
-  navigateToReportes() {
-    this.router.navigate(['reportes']); // Navega a la ruta de reportes
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: Event) {
+    if (this.dropdownOpen) {
+      this.dropdownOpen = false;
+    }
+  }
+
+  onHeaderClick(event: Event) {
+    event.stopPropagation();
   }
 }
