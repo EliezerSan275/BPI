@@ -4,8 +4,8 @@
       <div class="custom-dropdown">
         <img class="svg" src="icon_report.svg" (click)="toggleDropdown2($event)" />
         <div class="dropdown-content" [ngClass]="{ 'show': dropdownOpen }">
-          <button (click)="navigateTo('reportes', 'FINALIZADOS')">Finalizados</button>
           <button (click)="navigateTo('reportes', 'EN PROCESOS')">En Procesos</button>
+          <button (click)="navigateTo('reportes', 'FINALIZADOS')">Finalizados</button>
           <button (click)="navigateTo('reportes', 'CANCELADOS')">Cancelados</button>
         </div>
       </div>

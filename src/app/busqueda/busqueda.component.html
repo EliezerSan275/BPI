@@ -17,10 +17,6 @@
         </div>
     </div>
 
-
-
-
-
     <div class="contratos-grid">
         <div class="grid-header">
             <h1>{{ ruta | uppercase }}</h1>
@@ -34,8 +30,25 @@
 
         </div>
 
-        <div class="button-div">
+        <div class="button-div" (click)="openModal()">
             <img src="plus-ico.png" alt="" />
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div *ngIf="modalOpen" class="modal-overlay" (click)="closeModal()">
+        <div class="modal-content" (click)="$event.stopPropagation()">
+            <h2>NUEVA {{ ruta | uppercase }}</h2>
+            <div class="div-inputs">
+                <input type="text" id="Cname" name="fCame" placeholder="Nombre Compañia">
+                <input type="text" id="Cname" name="fCame" placeholder="Nombre Compañia">
+                <input type="text" id="Cname" name="fCame" placeholder="Nombre Compañia">
+                <input type="text" id="Cname" name="fCame" placeholder="Nombre Compañia">
+            </div>
+            <div class="modal-btns">
+                <button (click)="closeModal()">CANCELAR</button>
+                <button (click)="closeModal()" class="btn-gradiente">ACEPTAR</button>
+            </div>
         </div>
     </div>
 </div>

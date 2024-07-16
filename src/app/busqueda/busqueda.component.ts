@@ -20,10 +20,12 @@ export class BusquedaComponent implements OnInit {
   gridCards: any;
   ruta: any;
   dropdownOpen = false;
+  modalOpen = false;
 
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
   }
+  
   toggleOption(option: string, event: Event) {
     const inputElement = event.target as HTMLInputElement;
     const checked = inputElement.checked;
@@ -33,8 +35,14 @@ export class BusquedaComponent implements OnInit {
     } else {
     }
   }
-  
 
+  openModal() {
+    this.modalOpen = true;
+  }
+
+  closeModal() {
+    this.modalOpen = false;
+  }
 
   constructor(private router: Router, private dataService: DataService) {}
 
