@@ -20,7 +20,7 @@ export class MainHeaderComponent {
   menuVisible: boolean = false;
   dropdownOpen: boolean = false;
 
-  constructor(private router: Router, private dataService: DataService) {}
+  constructor(private router: Router, private dataService: DataService) { }
 
   navigateTo(route: string, ruta: string) {
     if (ruta === 'EN PROCESOS') {
