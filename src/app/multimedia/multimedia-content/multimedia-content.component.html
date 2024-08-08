@@ -1,0 +1,34 @@
+<div *ngIf="files.length > 0" class="grid-container">
+  <div *ngFor="let fileName of files" class="grid-item">
+    <div *ngIf="getFileType(fileName) === 'image'">
+      <img [src]="getFileUrl(level1Key || '', level2Key || '', level3Key || '', fileName)" alt="{{ fileName }}">
+    </div>
+
+    <div *ngIf="getFileType(fileName) === 'video'">
+      <video [src]="getFileUrl(level1Key || '', level2Key || '', level3Key || '', fileName)" controls></video>
+    </div>
+
+    <div *ngIf="getFileType(fileName) === 'pdf'">
+      <iframe [src]="sanitizeUrl(getFileUrl(level1Key || '', level2Key || '', level3Key || '', fileName))" width="100%"
+        height="500px" frameborder="0"></iframe>
+    </div>
+
+    <!-- Mostrar mensajes del JSON directamente en el div grid-item -->
+    <ng-container *ngIf="getFileType(fileName) === 'jsonMessage'">
+      <div *ngFor="let message of (messages[fileName] || [])" class="mensaje-capsula">
+        <a>
+          <strong>{{ message.hora }}:</strong> {{ message.mensaje }}
+        </a>
+      </div>
+    </ng-container>
+
+
+    <div *ngIf="getFileType(fileName) === 'other'">
+      <a [href]="getFileUrl(level1Key || '', level2Key || '', level3Key || '', fileName)" target="_blank"
+        class="file-link">
+        {{ getFileNameWithoutExtension(fileName) }}<br>
+        Archivo {{ getFileExtension(fileName) }}
+      </a>
+    </div>
+  </div>
+</div>

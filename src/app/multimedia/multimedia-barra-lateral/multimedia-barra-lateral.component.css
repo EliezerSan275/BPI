@@ -1,0 +1,49 @@
+* {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tercer {
+    padding: 5px;
+    border-radius: 3px;
+    margin: 2px 0;
+}
+
+.tercer:hover {
+    background: var(--primary-500);
+    color: var(--greyscale-100);
+}
+.tercer.selected {
+    background: var(--primary-500);
+    color: var(--greyscale-100);
+}
+
+/* Quitar viñetas y márgenes de las listas desordenadas (ul) */
+ul {
+    list-style-type: none;
+    margin: 0px;
+    /* Elimina las viñetas */
+}
+
+/* Quitar números y márgenes de las listas ordenadas (ol) */
+ol {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    /* Elimina los números */
+}
+
+.toggle-icon {
+    margin-right: 5px;
+    /* Espacio entre el icono y el texto */
+}
+
+.expanded::before {
+    content: '▼';
+    /* Triángulo hacia abajo */
+}
+
+.collapsed::before {
+    content: '▶';
+    /* Triángulo hacia la derecha */
+}

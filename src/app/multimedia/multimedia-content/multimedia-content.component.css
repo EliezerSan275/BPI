@@ -1,0 +1,30 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px; /* Espacio entre los elementos del grid */
+}
+
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente los elementos */
+  align-items: left; /* Centra horizontalmente los elementos */
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  background: var(--greyscale-100);
+  text-align: center;
+}
+
+.grid-item img, .grid-item video {
+  max-width: 100%;
+  height: auto;
+}
+
+.mensaje-capsula{
+  text-align: left;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}

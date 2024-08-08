@@ -1,0 +1,58 @@
+/* Estilos generales */
+.multimedia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.header-buscador {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 85%;
+}
+
+.multimedia-content {
+    width: 90%;
+    height: 75%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    /* Ajusta las proporciones según lo necesario */
+    gap: 30px;
+    /* Espacio entre columnas */
+    align-items: start;
+    /* Alineación vertical en el grid */
+}
+
+/* Estilo para el componente barra lateral */
+app-multimedia-barra-lateral {
+    color: var(--greyscale-900);
+    grid-column: 1;
+    /* Se coloca en la primera columna */
+    background-color: var(--primary-100);
+    box-shadow: 5px 5px 15px var(--greyscale-700);
+    border-radius: 15px;
+    height: calc(100% - 20px);
+    padding: 10px;
+    overflow-y: auto; 
+    overflow-x: hidden;
+}
+
+app-multimedia-content {
+    color: var(--greyscale-900);
+    grid-column: 2;
+    background-color: var(--primary-100);
+    box-shadow: 5px 5px 15px var(--greyscale-700);
+    border-radius: 15px;
+    height: calc(100% - 20px);
+    padding: 10px;
+    overflow-y: auto; 
+    overflow-x: hidden;
+}

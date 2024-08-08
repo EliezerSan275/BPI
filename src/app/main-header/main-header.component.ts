@@ -27,7 +27,7 @@ export class MainHeaderComponent {
       this.dataService.setData(ruta);
     } else if (ruta === 'FINALIZADOS') {
       this.dataService.setData(ruta);
-    } else if (ruta === 'CANCELADOS') {
+    } else if (ruta === 'CANCELADOS') { 
       this.dataService.setData(ruta);
     }
     this.router.navigate([route]);

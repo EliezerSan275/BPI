@@ -1,0 +1,31 @@
+<div *ngIf="data">
+    <ul>
+        <ng-container *ngFor="let item of getKeys(data)">
+            <li>
+                <span class="toggle-icon" (click)="toggleVisibility(item)"
+                    [ngClass]="{'expanded': isVisible(item), 'collapsed': !isVisible(item)}">
+                    {{ item }}
+                </span>
+                <ul *ngIf="isVisible(item)">
+                    <ng-container *ngFor="let subItem of getKeys(data[item])">
+                        <li>
+                            <span class="toggle-icon" (click)="toggleVisibility(item + '-' + subItem)"
+                                [ngClass]="{'expanded': isVisible(item + '-' + subItem), 'collapsed': !isVisible(item + '-' + subItem)}">
+                                {{ subItem }}
+                            </span>
+                            <ul *ngIf="isVisible(item + '-' + subItem)">
+                                <ng-container *ngFor="let thirdLevel of getKeys(data[item][subItem])">
+                                    <li class="tercer"
+                                        (click)="onFileSelect(item, subItem, thirdLevel)"
+                                        [ngClass]="{'selected': isSelected(item, subItem, thirdLevel)}">
+                                        {{ thirdLevel }}
+                                    </li>
+                                </ng-container>
+                            </ul>
+                        </li>
+                    </ng-container>
+                </ul>
+            </li>
+        </ng-container>
+    </ul>
+</div>

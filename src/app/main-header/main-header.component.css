@@ -8,7 +8,7 @@
     height: 10vh;
     /* El encabezado ocupa el 10% de la altura de la ventana */
     background-color: var(--greyscale-100);
-    color: black;
+    color: var(--greyscale-900);
 }
 
 .section {

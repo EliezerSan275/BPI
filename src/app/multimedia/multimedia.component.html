@@ -1,0 +1,7 @@
+<div class="multimedia">
+    <div class="header-buscador"></div>
+    <div class="multimedia-content">
+        <app-multimedia-barra-lateral [data]="data" (fileSelection)="onFileSelection($event)"></app-multimedia-barra-lateral>
+        <app-multimedia-content [data]="data" [level1Key]="selectedFile.level1" [level2Key]="selectedFile.level2" [level3Key]="selectedFile.level3"></app-multimedia-content>
+    </div>
+</div>
